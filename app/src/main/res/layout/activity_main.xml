@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.MainActivity"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <EditText
+        android:id="@+id/quiz_size_ed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Kaç soruluk quiz istediğinizi giriniz."
+        android:inputType="number"
+        android:layout_centerHorizontal="true"></EditText>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/start_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Start"
+        android:theme="@style/Theme.MaterialComponents"
+        android:layout_below="@id/quiz_size_ed"
+        android:layout_centerHorizontal="true"></com.google.android.material.button.MaterialButton>
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/quiz_viewPager"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        android:layout_below="@+id/start_btn"></androidx.viewpager.widget.ViewPager>
+
+
+
+</RelativeLayout>
